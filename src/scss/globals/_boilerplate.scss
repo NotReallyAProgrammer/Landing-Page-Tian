@@ -1,4 +1,4 @@
-@use "../util" as u;
+@use "../utils" as u;
 
 *,
 *::before,
@@ -19,11 +19,16 @@ button {
   cursor: pointer;
 }
 
+a:any-link {
+  color: var(--FONT-COLOR);
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
 }
 
 body {
-  font: u.$font;
+  font-family: u.$font;
+  color: var(--FONT-COLOR);
 }
