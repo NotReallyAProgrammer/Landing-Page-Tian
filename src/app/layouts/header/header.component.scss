@@ -4,6 +4,10 @@
   padding-inline: var(--PADDING-INLINE-MOBILE);
   padding-block: var(--PADDING-BLOCK-HEADER);
 
+  @include u.breakpoint(large) {
+    padding-inline: var(--PADDING-INLINE-TABLET);
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -33,17 +37,67 @@
     }
 
     .menu {
+      display: none;
       ul {
         list-style: none;
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 20px;
-        padding: 10px;
+
+        li {
+          padding: 5px;
+
+          &:hover {
+            border-bottom: 2.5px solid var(--PRIMARY-COLOR);
+          }
+        }
+
+        .contact {
+          padding: 10px 24px;
+          background-color: var(--PRIMARY-COLOR);
+          color: white;
+          border-radius: 10px;
+
+          a {
+            color: white;
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+
+        .mode-button {
+          button {
+            background: none;
+            padding: u.rem(10);
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+
+            i {
+              display: grid;
+              place-items: center;
+
+              img {
+                height: u.rem(20);
+                width: u.rem(20);
+              }
+            }
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+
+      @include u.breakpoint(medium) {
+        display: block;
       }
     }
 
-    button {
+    .contact-button {
       border: none;
       background: none;
       padding: 0;
@@ -58,6 +112,10 @@
           height: 100%;
           object-fit: contain;
         }
+      }
+
+      @include u.breakpoint(medium) {
+        display: none;
       }
     }
   }
