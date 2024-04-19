@@ -14,28 +14,6 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: u.rem(5);
-
-      figure {
-        width: u.rem(28);
-        height: u.rem(28);
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      h3 {
-        font-weight: 700;
-        font-size: u.rem(22);
-      }
-    }
-
     .menu {
       display: none;
       ul {

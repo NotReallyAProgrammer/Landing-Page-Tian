@@ -1,0 +1,53 @@
+@use "../../../scss/utils/" as u;
+
+.footer {
+  padding-inline: var(--PADDING-INLINE-MOBILE);
+  padding-block: var(--PADDING-BLOCK-FOOTER);
+
+  &__socials {
+    margin-top: u.rem(30);
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: u.rem(10);
+      list-style: none;
+
+      li {
+        padding: 5px;
+        border: 1px solid var(--BORDER-COLOR);
+        border-radius: 5px;
+        a {
+          i {
+            display: grid;
+            place-items: center;
+
+            img {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin-top: u.rem(50);
+
+    nav {
+      margin-bottom: u.rem(40);
+      h3 {
+        margin-bottom: u.rem(15);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(20);
+        list-style: none;
+      }
+    }
+  }
+}
