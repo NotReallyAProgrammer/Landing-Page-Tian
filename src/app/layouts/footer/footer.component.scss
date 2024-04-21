@@ -49,5 +49,31 @@
         list-style: none;
       }
     }
+    @include u.breakpoint(medium) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include u.breakpoint(large) {
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    @include u.breakpoint(xlarge) {
+      margin-top: 0;
+      max-width: auto;
+      justify-content: space-around;
+      margin-inline: 0;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    padding-inline: var(--PADDING-INLINE-TABLET);
+  }
+
+  @include u.breakpoint(xlarge) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
