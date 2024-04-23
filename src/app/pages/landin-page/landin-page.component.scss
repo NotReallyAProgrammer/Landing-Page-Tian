@@ -1,0 +1,51 @@
+@use "../../../scss/utils/" as u;
+
+.landing {
+  &__hero {
+    margin-top: u.rem(10);
+
+    padding-inline: var(--PADDING-INLINE-MOBILE);
+    padding-block: var(--PADDING-BLOCK-HERO);
+
+    .hero-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: u.rem(20);
+
+      max-width: 800px;
+      margin-inline: auto;
+      h1 {
+        font-size: 2.375rem;
+        font-size: clamp(2.375rem, 1.85rem + 2.625vw, 5rem);
+        color: var(--FONT-HEADING-COLOR);
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+        color: var(--FONT-DESC-COLOR);
+      }
+    }
+
+    .hero-button {
+      margin-top: u.rem(40);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: u.rem(20);
+
+      button {
+        border: none;
+        padding: 10px 30px;
+        color: white;
+        background-color: var(--PRIMARY-COLOR);
+        border-radius: 10px;
+      }
+
+      a {
+        color: var(--PRIMARY-COLOR);
+      }
+    }
+  }
+}
