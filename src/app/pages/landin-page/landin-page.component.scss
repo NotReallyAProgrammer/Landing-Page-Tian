@@ -1,10 +1,10 @@
 @use "../../../scss/utils/" as u;
 
 .landing {
+  padding-inline: var(--PADDING-INLINE-MOBILE);
   &__hero {
     margin-top: u.rem(10);
 
-    padding-inline: var(--PADDING-INLINE-MOBILE);
     padding-block: var(--PADDING-BLOCK-HERO);
 
     .hero-header {
@@ -45,6 +45,48 @@
 
       a {
         color: var(--PRIMARY-COLOR);
+      }
+    }
+  }
+
+  &__feature {
+    padding-block: var(--PADDING-BLOCK-HERO);
+    .feature-wrapper {
+      background: #000000;
+      padding: 32px 48px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .feature-info {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(10);
+
+        h2 {
+          font-size: 1.875rem;
+          font-size: clamp(1.875rem, 1.775rem + 0.5vw, 2.375rem);
+        }
+
+        p {
+          max-width: 250px;
+          font-size: 1.25rem;
+          font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+        }
+      }
+
+      i {
+        display: grid;
+        place-items: center;
+        align-self: self-start;
+
+        svg {
+          height: 30px;
+          width: 30px;
+          fill: var(--PRIMARY-COLOR);
+        }
       }
     }
   }
