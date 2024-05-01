@@ -99,7 +99,70 @@
 
     @include u.breakpoint(xlarge) {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__courses {
+    padding-inline: var(--PADDING-INLINE-MOBILE);
+
+    h2 {
+      font-size: u.rem(38);
+      text-align: center;
+    }
+
+    .courses-card {
+      border: 1px solid var(--BORDER-COLOR);
+      margin-top: u.rem(80);
+      border-radius: 10px;
+      padding: u.rem(15);
+      max-width: 360px;
+      max-height: 470px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: u.rem(10);
+
+      figure {
+        margin-bottom: u.rem(15);
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 1.8rem);
+      }
+
+      p {
+        font-size: u.rem(14);
+        color: var(--FONT-DESC-COLOR);
+      }
+
+      .card-time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: u.rem(16);
+        i {
+          display: grid;
+          place-items: center;
+
+          svg {
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+
+      button {
+        color: white;
+        background-color: var(--PRIMARY-COLOR);
+        padding: u.rem(10);
+        border: none;
+        border-radius: 10px;
+      }
     }
   }
 }
