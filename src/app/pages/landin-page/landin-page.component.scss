@@ -111,57 +111,85 @@
       text-align: center;
     }
 
-    .courses-card {
-      border: 1px solid var(--BORDER-COLOR);
+    .card-wrapper {
       margin-top: u.rem(80);
-      border-radius: 10px;
-      padding: u.rem(15);
-      max-width: 360px;
-      max-height: 470px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      gap: u.rem(10);
+      gap: u.rem(30);
+      align-items: center;
+      .courses-card {
+        border: 1px solid var(--BORDER-COLOR);
 
-      figure {
-        margin-bottom: u.rem(15);
-        img {
+        border-radius: 10px;
+        padding: u.rem(15);
+        max-width: 360px;
+        max-height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: u.rem(10);
+        position: relative;
+
+        figure {
+          margin-bottom: u.rem(15);
+          img {
+            border-radius: 10px;
+          }
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          font-size: clamp(1.5rem, 1.4rem + 0.5vw, 1.8rem);
+        }
+
+        p {
+          font-size: u.rem(14);
+          color: var(--FONT-DESC-COLOR);
+        }
+
+        .card-time {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: u.rem(16);
+          i {
+            display: grid;
+            place-items: center;
+
+            svg {
+              height: 24px;
+              width: 24px;
+            }
+          }
+        }
+
+        button {
+          color: white;
+          background-color: var(--PRIMARY-COLOR);
+          padding: u.rem(10);
+          border: none;
           border-radius: 10px;
         }
-      }
 
-      h3 {
-        font-size: 1.5rem;
-        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 1.8rem);
-      }
+        .course-type {
+          position: absolute;
+          background-color: var(--PRIMARY-COLOR);
+          padding: u.rem(5) u.rem(10);
 
-      p {
-        font-size: u.rem(14);
-        color: var(--FONT-DESC-COLOR);
-      }
+          top: u.rem(30);
+          left: u.rem(30);
+          border-radius: 5px;
 
-      .card-time {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: u.rem(16);
-        i {
-          display: grid;
-          place-items: center;
-
-          svg {
-            height: 24px;
-            width: 24px;
+          p {
+            font-size: u.rem(12);
+            font-weight: 700;
+            color: white;
           }
         }
       }
 
-      button {
-        color: white;
-        background-color: var(--PRIMARY-COLOR);
-        padding: u.rem(10);
-        border: none;
-        border-radius: 10px;
+      @include u.breakpoint(medium) {
+        flex-direction: row;
       }
     }
   }
