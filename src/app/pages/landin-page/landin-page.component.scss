@@ -1,7 +1,6 @@
 @use "../../../scss/utils/" as u;
 
 .landing {
-  padding-inline: var(--PADDING-INLINE-MOBILE);
   &__hero {
     margin-top: u.rem(10);
 
@@ -188,8 +187,52 @@
         }
       }
 
-      @include u.breakpoint(medium) {
+      @include u.breakpoint(large) {
         flex-direction: row;
+      }
+    }
+  }
+
+  &__author {
+    margin-top: u.rem(80);
+    background-color: #32077e;
+    background: rgb(49, 7, 125);
+    background: linear-gradient(
+      180deg,
+      rgba(49, 7, 125, 1) 0%,
+      rgba(233, 0, 255, 1) 100%
+    );
+
+    .author-wrapper {
+      padding-block: var(--PADDING-BLOCK-HERO);
+      padding-inline: var(--PADDING-INLINE-MOBILE);
+      text-align: center;
+      color: white;
+
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.19);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      h2 {
+        font-size: 1.875rem;
+        font-size: clamp(1.875rem, 1.775rem + 0.5vw, 2.375rem);
+        margin-bottom: u.rem(30);
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 1.375rem + 0.625vw, 2.125rem);
+        line-height: 1.5;
+        max-width: u.rem(1100);
+        margin-inline: auto;
+      }
+      @include u.breakpoint(medium) {
+        padding-inline: var(--PADDING-INLINE-TABLET);
       }
     }
   }
