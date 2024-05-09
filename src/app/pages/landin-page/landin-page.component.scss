@@ -211,7 +211,7 @@
 
       /* From https://css.glass */
       background: rgba(255, 255, 255, 0.19);
-      border-radius: 16px;
+
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
@@ -233,6 +233,54 @@
       }
       @include u.breakpoint(medium) {
         padding-inline: var(--PADDING-INLINE-TABLET);
+      }
+    }
+  }
+
+  &__graphics {
+    padding-block: var(--PADDING-BLOCK-HERO);
+    padding-inline: var(--PADDING-INLINE-MOBILE);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: u.rem(150);
+
+    .graphic {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      figure {
+        max-width: 500px;
+        max-height: 500px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .graphic-text {
+        h3 {
+          font-size: 1.875rem;
+          font-size: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
+          margin-bottom: u.rem(20);
+        }
+
+        p {
+          font-size: 1.25rem;
+          font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+          line-height: 1.4;
+          color: var(--FONT-DESC-COLOR);
+          max-width: u.rem(700);
+        }
+      }
+
+      @include u.breakpoint(large) {
+        flex-direction: row;
+        text-align: start;
+        gap: u.rem(200);
       }
     }
   }
