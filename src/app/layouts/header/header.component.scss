@@ -64,7 +64,8 @@
             }
           }
 
-          &:hover {
+          &:hover,
+          &:focus {
             border-bottom: none;
           }
         }
