@@ -12,5 +12,11 @@ import { FooterComponent } from './layouts/footer/footer.component';
   imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
 })
 export class AppComponent {
-  title = 'LandingPage-tian';
+  isDark!: boolean;
+
+  constructor() {
+    if (this.isDark == false) {
+      console.log('Dark');
+    }
+  }
 }
