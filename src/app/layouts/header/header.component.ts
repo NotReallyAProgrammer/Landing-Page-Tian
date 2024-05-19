@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,17 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  @Input() isDarkMode: boolean = true;
+  // @Input() isDarkMode: boolean = true;
+  state: boolean = true;
+  @Output() isDarkMode: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   darkMode(): void {
-    this.isDarkMode = false;
+    if (this.state == true) {
+      this.isDarkMode.emit(true);
+      this.state = false;
+    } else {
+      this.isDarkMode.emit(false);
+      this.state = true;
+    }
   }
 }

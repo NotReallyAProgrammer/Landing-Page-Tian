@@ -3,6 +3,7 @@
 .footer {
   padding-inline: var(--PADDING-INLINE-MOBILE);
   padding-block: var(--PADDING-BLOCK-FOOTER);
+  background-color: var(--FOOTER-BG-COLOR);
 
   &__socials {
     margin-top: u.rem(30);

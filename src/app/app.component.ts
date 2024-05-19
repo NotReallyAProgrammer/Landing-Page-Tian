@@ -14,9 +14,9 @@ import { FooterComponent } from './layouts/footer/footer.component';
 export class AppComponent {
   isDark!: boolean;
 
-  constructor() {
-    if (this.isDark == false) {
-      console.log('Dark');
-    }
+  constructor() {}
+
+  darkMode(value: boolean) {
+    this.isDark = value;
   }
 }
