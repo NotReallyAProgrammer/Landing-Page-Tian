@@ -4,6 +4,7 @@
   padding-inline: var(--PADDING-INLINE-MOBILE);
   padding-block: var(--PADDING-BLOCK-FOOTER);
   background-color: var(--FOOTER-BG-COLOR);
+  object-fit: contain;
 
   &__socials {
     margin-top: u.rem(30);
