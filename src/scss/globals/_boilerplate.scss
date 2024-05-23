@@ -17,10 +17,15 @@ img {
 button {
   font: inherit;
   cursor: pointer;
+  color: #fafafa;
+}
+
+h3 {
+  color: var(--FONT-COLOR);
 }
 
 a:any-link {
-  color: var(--FONT-COLOR);
+  color: var(--FONT-LINKS-COLOR);
 }
 
 html {
