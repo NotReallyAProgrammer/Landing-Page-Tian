@@ -13,11 +13,7 @@
     img {
       width: 100%;
       height: auto;
+      filter: var(--SVG-COLOR);
     }
-  }
-
-  h3 {
-    font-weight: 700;
-    font-size: u.rem(22);
   }
 }

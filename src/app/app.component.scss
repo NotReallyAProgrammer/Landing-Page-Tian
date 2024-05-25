@@ -5,9 +5,14 @@
 .main-dark {
   --BODY-BG-COLOR: #262626;
   --FOOTER-BG-COLOR: #000;
-
   --PRIMARY-COLOR: #ddd6fe;
+
   --FONT-COLOR: #fafafa;
   --FONT-HEADING-COLOR: #fff;
   --FONT-LINKS-COLOR: #fafafa;
+  --FONT-BUTTON-COLOR: hsl(258, 90%, 66%);
+  --FONT-DESC-COLOR: #a3a3a3;
+
+  --SVG-COLOR: invert(100%) sepia(98%) saturate(38%) hue-rotate(66deg)
+    brightness(107%) contrast(96%);
 }

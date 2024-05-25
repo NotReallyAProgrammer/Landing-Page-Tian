@@ -76,7 +76,7 @@
       button {
         border: none;
         padding: 10px 30px;
-        color: white;
+
         background-color: var(--PRIMARY-COLOR);
         border-radius: 10px;
       }
@@ -197,12 +197,12 @@
             svg {
               height: 24px;
               width: 24px;
+              filter: var(--SVG-COLOR);
             }
           }
         }
 
         button {
-          color: white;
           background-color: var(--PRIMARY-COLOR);
           padding: u.rem(10);
           border: none;
@@ -221,7 +221,7 @@
           p {
             font-size: u.rem(12);
             font-weight: 700;
-            color: white;
+            color: var(--FONT-BUTTON-COLOR);
           }
         }
       }

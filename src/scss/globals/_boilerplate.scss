@@ -17,11 +17,13 @@ img {
 button {
   font: inherit;
   cursor: pointer;
-  color: #fafafa;
+  color: var(--FONT-BUTTON-COLOR);
 }
 
 h3 {
   color: var(--FONT-COLOR);
+  font-weight: 700;
+  font-size: u.rem(22);
 }
 
 a:any-link {
