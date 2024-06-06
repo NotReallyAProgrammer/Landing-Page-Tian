@@ -8,7 +8,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  // @Input() isDarkMode: boolean = true;
   state: boolean = true;
   @Output() isDarkMode: EventEmitter<boolean> = new EventEmitter<boolean>();
 
