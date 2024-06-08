@@ -25,9 +25,10 @@
 
         li {
           padding: 5px;
-
+          position: relative;
           &:hover {
             border-bottom: 2.5px solid var(--PRIMARY-COLOR);
+            transition: all 0.3s;
           }
         }
 
@@ -60,6 +61,13 @@
               svg {
                 height: u.rem(20);
                 width: u.rem(20);
+              }
+
+              .moon {
+                -webkit-animation: slide-in-top 0.5s
+                  cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+                animation: slide-in-top 0.5s
+                  cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
               }
             }
           }
@@ -97,5 +105,40 @@
         display: none;
       }
     }
+  }
+}
+
+//ANIMATIONS
+
+@-webkit-keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
   }
 }

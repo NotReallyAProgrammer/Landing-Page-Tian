@@ -157,7 +157,7 @@
       align-items: center;
       .courses-card {
         border: 1px solid var(--BORDER-COLOR);
-
+        cursor: pointer;
         border-radius: 10px;
         padding: u.rem(15);
         max-width: 360px;
@@ -223,6 +223,10 @@
             font-weight: 700;
             color: var(--FONT-BUTTON-COLOR);
           }
+        }
+
+        &:hover {
+          border: 2px solid var(--PRIMARY-COLOR);
         }
       }
 
